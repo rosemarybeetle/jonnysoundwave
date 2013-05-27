@@ -1,12 +1,16 @@
 import flash.utils.Timer;
 import flash.media.Sound;
 import flash.media.SoundChannel;
-
+stop();
 fscommand("fullscreen", "true");
 greenery.visible=false;
 dubstepperGuy.visible=false;
 ghetto.visible=false;
 oneD.visible=false;
+puppet1.visible=false;
+puppet2.visible=false;
+jonny.visible=false;
+puppet3.visible=false;
 if (Camera.names.length > 0) 
 { 
     trace("User has at least one camera installed."); 
@@ -47,7 +51,7 @@ var channelOneD:SoundChannel = new SoundChannel();
 stage.addEventListener(KeyboardEvent.KEY_DOWN, fl_KeyboardDownHandler);
 function fl_KeyboardDownHandler(event:KeyboardEvent):void
 {
-  // Start your custom code
+	// Start your custom code
 	// This example code displays the words "Key Code Pressed:" and the keycode of the pressed key in the Output panel.
 	trace("Key Code Pressed: " + event.keyCode);
 	if (event.keyCode ==48) {
@@ -118,6 +122,10 @@ function fl_KeyboardDownHandler(event:KeyboardEvent):void
 	}
 	if (event.keyCode ==51) {
 		currentFocus="puppet3" // puppet 3 the focus if number 3 is pressed
+		
+	}
+	if (event.keyCode ==74) {
+		currentFocus="jonny" // puppet 3 the focus if number 3 is pressed
 		
 	}
 	if (event.keyCode ==77)
